@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Practice</title>
+<body>
+    <header>
+        <nav>
+          <a href="#"><img src="logo.jpeg" alt="Rafting Company Logo"></a>
+          <div class="menu-icon">☰</div>
+          <div class="nav-links">
+            <a href="trips.html">Trips</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+      </header>
+      
+      <main>
+        <section class="hero">
+          <img src="rafting.jpg" alt="Whitewater rafting adventure">
+          <div class="hero-text">
+            <h1>Adventure Awaits!</h1>
+            <a href="trips.html" class="cta-button">Book Now</a>
+          </div>
+        </section>
+      
+        <section class="trip-highlights">
+          <div class="trip-card">...</div>
+          <div class="trip-card">...</div>
+          <div class="trip-card">...</div>
+        </section>
+      </main>
+      
+      <footer>...</footer>
+    
+</body>
+    
+
+</html>
