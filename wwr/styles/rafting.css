@@ -63,6 +63,14 @@ nav, p, section, article {
   background-color: var(--accent1-color);
   color: #fff;
 }
+
+.hero article {
+  position:absolute;
+  bottom: 20px;
+  left: 20px;
+  filter: brightness(70);
+}
+
 .hero article img {
   float: right;
   width: 125px;
