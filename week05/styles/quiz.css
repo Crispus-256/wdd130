@@ -1,0 +1,93 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: navy;
+}
+
+/* Main Content Styling */
+main {
+  margin: 0 auto;
+  width: 600px;
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Form Items */
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit Button */
+button {
+  margin-top: 1rem;
+  background-color: navy;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+/* Footer Styling */
+footer {
+  margin: 1rem auto 0;
+  width: 600px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+}

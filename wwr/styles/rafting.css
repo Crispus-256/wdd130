@@ -2,8 +2,10 @@
 :root {
   --primary-color: #505033;
   --secondary-color: #264969;
-  --accent1-color: #cfcfb4;
+  --accent1-color: #4f4f41;
   --accent2-color: #b4cde4;
+  --white: #fff;
+  --success-color: darkgreen;
   --heading-font: 'Georgia', serif;
   --body-font: 'Roboto', sans-serif;
 }
@@ -23,7 +25,8 @@ body {
 
 /* Header, Main, Footer Width and Centering */
 header, main, footer {
-  width: 840px;
+  max-width: 840px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -56,6 +59,11 @@ h1, h2 {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-container nav a:hover {
+  color: var(--accent2-color);
 }
 
 /* Hero Section */
@@ -74,23 +82,24 @@ h1, h2 {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   background-color: var(--accent1-color);
-  color: #fff;
+  color: var(--white);
 }
 
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  filter: brightness(70%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--white);
 }
 
 .hero article img {
-  float: right;
   width: 125px;
-  margin: 10px;
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -106,6 +115,12 @@ h1, h2 {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adventure-grid figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .adventure-grid figcaption {
@@ -119,15 +134,15 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 20px;
+  padding: 1rem;
   background-color: var(--secondary-color);
-  color: #fff;
+  color: var(--white);
 }
 
 .socialmedia-links {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  align-items: center;
 }
 
 .socialmedia-links img {
@@ -138,4 +153,88 @@ footer {
 footer p {
   font-size: 0.9rem;
   margin: 0;
+}
+
+/* Contact Page Styles */
+.contact-info {
+  margin: 2rem 0;
+}
+
+iframe {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.employee-profiles .profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.profile-grid figure {
+  text-align: center;
+}
+
+.contact-form {
+  margin: 2rem 0;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent2-color);
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-form label {
+  display: block;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.contact-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--success-color);
+}
+
+.contact-form button:focus {
+  outline: 2px solid var(--accent2-color);
+  outline-offset: 2px;
 }
