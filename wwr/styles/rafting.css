@@ -1,97 +1,114 @@
 /* Root Variables */
 :root {
-  --primary-color: #505033;
-  --secondary-color: #264969;
-  --accent1-color: #4f4f41;
-  --accent2-color: #b4cde4;
-  --white: #fff;
-  --success-color: darkgreen;
-  --heading-font: 'Georgia', serif;
-  --body-font: 'Roboto', sans-serif;
+  --primary-color: #505033; /* Main brand color (e.g., for buttons, headers) */
+  --secondary-color: #264969; /* Secondary color (e.g., for backgrounds, accents) */
+  --accent1-color: #4f4f41; /* Neutral accent color for text or borders */
+  --accent2-color: #b4cde4; /* Light accent color for hover effects or highlights */
+  --white: #fff; /* White color for backgrounds or text */
+  --success-color: darkgreen; /* Success state color (e.g., for confirmation messages) */
+  --heading-font: 'Georgia', serif; /* Font family for headings */
+  --body-font: 'Roboto', sans-serif; /* Font family for body text */
 }
 
 /* Reset Box Model */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure padding and borders are included in element dimensions */
 }
 
 /* Body Styling */
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
+  font-family: var(--body-font); /* Set default font for the entire document */
+  color: var(--accent1-color); /* Default text color */
+  background-color: var(--white); /* Default background color */
+  line-height: 1.6; /* Improve readability by increasing line height */
 }
 
 /* Header, Main, Footer Width and Centering */
-header, main, footer {
-  max-width: 840px;
-  width: 100%;
-  margin: 0 auto;
+header,
+main,
+footer {
+  max-width: 840px; /* Limit maximum width for content sections */
+  width: 100%; /* Ensure full width within the container */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 1rem; /* Add spacing around content */
 }
 
 /* Headings Styling */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+h1,
+h2 {
+  font-family: var(--heading-font); /* Use a serif font for headings */
+  color: var(--primary-color); /* Set heading text color to primary brand color */
+  margin-bottom: 1rem; /* Add spacing below headings */
 }
 
 /* Header Container */
 .header-container {
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* Logo | Title | Nav */
-  align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Align items horizontally with space between them */
+  align-items: center; /* Vertically center items */
+  gap: 20px; /* Add spacing between header elements */
+  padding: 1rem; /* Add padding inside the header */
+  background-color: var(--primary-color); /* Set background color for the header */
+  color: var(--white); /* Set text color for the header */
 }
 
 .header-container img {
-  width: 50px;
-  height: auto;
+  width: 50px; /* Set logo image width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .header-container nav {
-  display: flex;
-  gap: 15px;
+  display: flex; /* Use Flexbox for navigation links */
+  gap: 1rem; /* Add spacing between navigation links */
 }
 
 .header-container nav a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline from links */
+  color: var(--white); /* Set link text color */
+  font-weight: bold; /* Make links bold */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .header-container nav a:hover {
-  color: var(--accent2-color);
+  color: var(--accent2-color); /* Change link color on hover */
 }
 
 /* Hero Section */
 .hero {
-  position: relative;
-  margin-bottom: 20px;
+  position: relative; /* Enable positioning of child elements */
+  margin-bottom: 2rem; /* Add spacing below the hero section */
 }
 
 .hero img {
-  display: block;
-  width: 100%;
-  height: auto;
+  display: block; /* Remove inline spacing below images */
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  background-color: var(--accent1-color);
-  color: var(--white);
+.hero-content {
+  position: absolute; /* Position content absolutely within the hero section */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  text-align: center; /* Center text horizontally */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+  padding: 1.5rem; /* Add padding inside the content box */
+  border-radius: 8px; /* Rounded corners for the content box */
+  color: var(--white); /* Set text color */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; /* Large font size for hero heading */
+  margin-bottom: 1rem; /* Add spacing below the heading */
 }
 
 .hero article {
+  display: flex;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 100px;
+  left: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   border-radius: 8px;
@@ -99,143 +116,274 @@ h1, h2 {
 }
 
 .hero article img {
-  width: 125px;
+  width: 100px; /* Fixed width for article image */
+  height: auto; /* Maintain aspect ratio */;
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.cta-button {
+  display: inline-block; /* Make the button behave like an inline element */
+  background-color: var(--accent2-color); /* Button background color */
+  color: var(--primary-color); /* Button text color */
+  padding: 0.75rem 1.5rem; /* Add padding inside the button */
+  text-decoration: none; /* Remove underline from the link */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-weight: bold; /* Make button text bold */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+  background-color: var(--success-color); /* Change button color on hover */
+}
+
 /* Adventure Grid */
 .adventure-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+  gap: 1.5rem; /* Add spacing between grid items */
+  padding: 2rem; /* Add padding around the grid */
 }
 
 .adventure-grid figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
 }
 
 .adventure-grid figure img:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
 }
 
 .adventure-grid figcaption {
-  font-size: 1rem;
-  margin-top: 5px;
-  text-align: center;
+  font-size: 1rem; /* Set caption font size */
+  margin-top: 0.5rem; /* Add spacing above the caption */
+  text-align: center; /* Center caption text */
+  color: var(--accent1-color); /* Set caption text color */
+}
+
+/* Employee Profiles - Horizontal Display */
+.employee-profiles .profile-grid {
+  display: flex; /* Use Flexbox for horizontal layout */
+  gap: 20px; /* Add spacing between profile items */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.profile-grid figure {
+  text-align: center; /* Center profile content */
+  margin: 0; /* Remove default margins */
+}
+
+.profile-grid img {
+  width: 150px; /* Fixed width for profile images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.profile-grid img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.profile-grid figcaption {
+  font-size: 1rem; /* Set caption font size */
+  margin-top: 0.5rem; /* Add spacing above the caption */
+  color: var(--accent1-color); /* Set caption text color */
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--secondary-color); /* Background color for newsletter section */
+  color: var(--white); /* Text color for newsletter section */
+  padding: 2rem; /* Add padding inside the section */
+  text-align: center; /* Center text horizontally */
+}
+
+.newsletter form {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack form elements vertically */
+  gap: 1rem; /* Add spacing between form elements */
+  max-width: 400px; /* Limit form width */
+  margin: 0 auto; /* Center form horizontally */
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  padding: 0.75rem; /* Add padding inside input fields */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners for input fields */
+  font-size: 1rem; /* Set font size for input fields */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for input fields */
+  color: var(--white); /* Set text color for input fields */
+}
+
+.newsletter button {
+  background-color: var(--accent2-color); /* Button background color */
+  color: var(--primary-color); /* Button text color */
+  padding: 0.75rem; /* Add padding inside the button */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.newsletter button:hover {
+  background-color: var(--success-color); /* Change button color on hover */
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+  gap: 20px; /* Add spacing between grid items */
+  padding: 2rem; /* Add padding around the grid */
+}
+
+.grid-item {
+  text-align: center; /* Center grid item content */
+  padding: 1rem; /* Add padding inside the grid item */
+  border: 1px solid var(--accent1-color); /* Add border around grid items */
+  border-radius: 8px; /* Rounded corners for grid items */
+  background-color: var(--white); /* Background color for grid items */
+}
+
+.grid-item img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grid-item img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.grid-item h3 {
+  font-family: var(--heading-font); /* Use a serif font for headings */
+  color: var(--primary-color); /* Set heading text color */
+  margin: 1rem 0; /* Add spacing around headings */
+}
+
+.grid-item p {
+  font-size: 1rem; /* Set paragraph font size */
+  color: var(--accent1-color); /* Set paragraph text color */
+}
+
+/* Call to Action */
+.cta {
+  background-color: var(--primary-color); /* Background color for CTA section */
+  color: var(--white); /* Text color for CTA section */
+  padding: 2rem; /* Add padding inside the section */
+  text-align: center; /* Center text horizontally */
+}
+
+.cta .cta-button {
+  background-color: var(--accent2-color); /* Button background color */
+  color: var(--primary-color); /* Button text color */
+  padding: 0.75rem 1.5rem; /* Add padding inside the button */
+  text-decoration: none; /* Remove underline from the link */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-weight: bold; /* Make button text bold */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cta .cta-button:hover {
+  background-color: var(--success-color); /* Change button color on hover */
+}
+
+/* Trip Descriptions */
+.trip-descriptions {
+  padding: 2rem; /* Add padding around the section */
+  text-align: center; /* Center text horizontally */
+}
+
+.trip-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 20px; /* Add spacing between grid items */
+}
+
+.trip-item {
+  background-color: var(--white); /* Background color for trip items */
+  border: 1px solid var(--accent1-color); /* Add border around trip items */
+  border-radius: 8px; /* Rounded corners for trip items */
+  padding: 1rem; /* Add padding inside the trip item */
+  text-align: center; /* Center trip item content */
+}
+
+.trip-item img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.trip-item img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.trip-item h3 {
+  font-family: var(--heading-font); /* Use a serif font for headings */
+  color: var(--primary-color); /* Set heading text color */
+  margin: 1rem 0; /* Add spacing around headings */
+}
+
+.trip-item p {
+  font-size: 1rem; /* Set paragraph font size */
+  color: var(--accent1-color); /* Set paragraph text color */
+}
+
+/* Trip Table */
+.trip-table {
+  padding: 2rem; /* Add padding around the section */
+  overflow-x: auto; /* Enable horizontal scrolling for tables */
+}
+
+.trip-table table {
+  width: 100%; /* Make table responsive */
+  border-collapse: collapse; /* Remove gaps between table cells */
+  margin: 0 auto; /* Center table horizontally */
+}
+
+.trip-table th,
+.trip-table td {
+  border: 1px solid var(--accent1-color); /* Add borders to table cells */
+  padding: 0.75rem; /* Add padding inside table cells */
+  text-align: left; /* Align text to the left */
+}
+
+.trip-table th {
+  background-color: var(--accent1-color); /* Background color for table headers */
+  color: var(--white); /* Text color for table headers */
+  font-weight: bold; /* Make header text bold */
 }
 
 /* Footer */
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  color: var(--white);
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack footer items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 1.5rem; /* Add padding inside the footer */
+  background-color: var(--secondary-color); /* Set footer background color */
+  color: var(--white); /* Set footer text color */
 }
 
 .socialmedia-links {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  display: flex; /* Use Flexbox for social media icons */
+  gap: 10px; /* Add spacing between icons */
+  align-items: center; /* Vertically center icons */
+  margin-top: 1rem; /* Add spacing above the icons */
 }
 
 .socialmedia-links img {
-  width: 30px;
-  height: 30px;
+  width: 30px; /* Set icon width */
+  height: 30px; /* Set icon height */
 }
 
 footer p {
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-/* Contact Page Styles */
-.contact-info {
-  margin: 2rem 0;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-}
-
-.employee-profiles .profile-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.profile-grid figure {
-  text-align: center;
-}
-
-.contact-form {
-  margin: 2rem 0;
-}
-
-.contact-form label {
-  display: block;
-  margin: 0.5rem 0 0.25rem;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--accent2-color);
-  outline: none;
-}
-
-.radio-group {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.contact-form label {
-  display: block;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-.contact-form input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--primary-color);
-}
-
-.contact-form button {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: var(--success-color);
-}
-
-.contact-form button:focus {
-  outline: 2px solid var(--accent2-color);
-  outline-offset: 2px;
+  font-size: 0.9rem; /* Set footer text font size */
+  margin: 0.5rem 0; /* Add spacing around footer text */
 }

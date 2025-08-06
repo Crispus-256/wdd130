@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our exciting white water rafting trips and adventures. Book your next adventure today!">
+  <meta name="author" content="Nuweamanya Crispus">
+  <title>Trips | Whitewater Rafting Adventures</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="images/logo.jpeg" alt="Rafting Company Logo">
+      <h1>Whitewater Rafting Co.</h1>
+      <nav aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.png" alt="Rafting Adventure">
+      <div class="hero-content">
+        <h1>Explore Our Exciting Trips</h1>
+        <p>Discover thrilling adventures tailored for all skill levels.</p>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+      <h2>Ready to Book Your Adventure?</h2>
+      <p>Contact us today to reserve your spot!</p>
+      <a href="contact.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <!-- Trip Descriptions -->
+    <section class="trip-descriptions">
+      <h2>Featured Adventures</h2>
+      <div class="trip-grid">
+        <div class="trip-item">
+          <img src="images/trip1.png" alt="Beginner's Rapids">
+          <h3>Beginner's Rapids</h3>
+          <p>Perfect for first-timers! Enjoy a scenic ride through gentle rapids.</p>
+        </div>
+        <div class="trip-item">
+          <img src="images/trip2.png" alt="Intermediate Challenge">
+          <h3>Intermediate Challenge</h3>
+          <p>Take on exciting rapids with moderate difficulty. Great for adventurers!</p>
+        </div>
+        <div class="trip-item">
+          <img src="images/trip3.png" alt="Advanced Expedition">
+          <h3>Advanced Expedition</h3>
+          <p>For experienced rafters only. Navigate intense rapids in stunning locations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trip Table -->
+    <section class="trip-table">
+      <h2>All Available Trips</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Trip Name</th>
+            <th>Duration</th>
+            <th>Difficulty</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beginner's Rapids</td>
+            <td>Half-Day</td>
+            <td>Easy</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Intermediate Challenge</td>
+            <td>Full-Day</td>
+            <td>Moderate</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Advanced Expedition</td>
+            <td>2 Days</td>
+            <td>Difficult</td>
+            <td>$200</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Whitewater Rafting Co. All rights reserved. | Nuweamanya Crispus</p>
+    <div class="socialmedia-links">
+      <a href="#"><img src="images/facebook.png" alt="Follow us on Facebook"></a>
+      <a href="#"><img src="images/twitter.png" alt="Follow us on Twitter"></a>
+      <a href="#"><img src="images/instagram.png" alt="Follow us on Instagram"></a>
+    </div>
+    <p><a href="images/wireframe.jpg" target="_blank">View Wireframe</a></p>
+  </footer>
+
+  <!-- JavaScript for Dynamic Year -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
